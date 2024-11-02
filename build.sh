@@ -23,7 +23,7 @@ rpm-ostree install screen
 systemctl enable podman.socket
 
 # Install Cosmic Desktop
-curl -Lo /etc/yum.repos.d/_copr_ryanabx-cosmic.repo https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-epoch/repo/fedora-$(rpm -E %fedora)/ryanabx-cosmic-epoch-fedora-$(rpm -E %fedora).repo
+curl -Lo /etc/yum.repos.d/_copr_ryanabx-cosmic.repo https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-epoch/repo/fedora-$RELEASE/ryanabx-cosmic-epoch-fedora-$RELEASE.repo
 rpm-ostree install cosmic-desktop
 rpm-ostree install gnome-keyring NetworkManager-tui NetworkManager-openvpn
 systemctl disable gdm || true
