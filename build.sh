@@ -24,12 +24,11 @@ systemctl enable podman.socket
 
 # Install Cosmic Desktop
 curl -Lo /etc/yum.repos.d/_copr_ryanabx-cosmic.repo https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-epoch/repo/fedora-$(rpm -E %fedora)/ryanabx-cosmic-epoch-fedora-$(rpm -E %fedora).repo
-rpm-ostree install cosmic-desktop power-profiles-daemon
+rpm-ostree install cosmic-desktop
 rpm-ostree install gnome-keyring NetworkManager-tui NetworkManager-openvpn
 systemctl disable gdm || true
 systemctl disable sddm || true
 systemctl enable cosmic-greeter
-systemctl enable power-profiles-daemon
 ostree container commit
 mkdir -p /var/tmp
 chmod -R 1777 /var/tmp
