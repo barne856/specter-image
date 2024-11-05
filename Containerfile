@@ -55,6 +55,7 @@ RUN mkdir -p /var/lib/alternatives && \
     ostree container commit
 
 COPY firefox-nightly.desktop /usr/share/applications/firefox-nightly.desktop
+COPY code.desktop /usr/share/applications/code.desktop
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit
