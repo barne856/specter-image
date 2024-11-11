@@ -54,7 +54,7 @@ RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     ostree container commit
 
-#COPY brave.desktop /usr/share/applications/brave.desktop
+COPY com.brave.Browser.desktop /var/lib/flatpak/exports/share/applications/com.brave.Browser.desktop
 COPY code.desktop /usr/share/applications/code.desktop
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
